@@ -1,11 +1,12 @@
 from flask import Flask,jsonify, request
 import requests
 
+Debug = False
 
 app=Flask(__name__)
 app.config.from_object(__name__)
 
-Debug = False
+
 
 @app.route('/ping', methods=['GET'])
 def ping():
