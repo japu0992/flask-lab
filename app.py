@@ -23,7 +23,7 @@ def random_word():
 @app.route('/string-count', methods=['POST'])
 def string_count():
     '''this pulls a random word from the api and gets the length of the string'''
-    string = request.get('https://random-word-api.herokuapp.com/word?number=1').json()[0]
+    string = requests.get('https://random-word-api.herokuapp.com/word?number=1').json()[0]
     return jsonify(len(string))
 
 if __name__ == '__main__':

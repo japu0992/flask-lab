@@ -9,5 +9,5 @@ cd flask-lab
 #This starts the docker container
 docker compose flask-lab-web-1
 
-#This calls the make-requests file 
-python make-requests.py
+#This calls the make-requests file
+docker-compose exec flask python make-requests.py
